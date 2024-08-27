@@ -1,0 +1,116 @@
+<!-- <div class="user-auth">
+     <h1>User Sign-up</h1>
+     <form class="common-form" #userSignup="ngForm" (ngSubmit)="signUp(userSignup.value)">
+          <input type="text" class="form-input" placeholder="Enter User Name" name="name" ngModel />
+          <input type="email" class="form-input" placeholder="Enter User email" name="email" ngModel />
+          <input type="password" class="form-input" placeholder="Enter User password" name="password" ngModel />
+
+          <button class="form-button">Sign-up</button>
+
+     </form>
+</div> -->
+<section *ngIf="!showLogin" class="vh-100">
+     <div class="container-fluid h-custom">
+       <div class="row d-flex justify-content-center align-items-center h-100">
+         <div class="col-md-9 col-lg-6 col-xl-4">
+           <img src="https://imageio.forbes.com/specials-images/imageserve/63091c9f9d6ae39a421b5fd3/E-commerce-growth-infographic-on-laptop-/0x0.jpg?format=jpg&crop=3110,2332,x285,y0,safe&width=960"
+             class="img-fluid" alt="Sample image">
+         </div>
+         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-0 ">
+
+           <form class="common-form" #userSignup="ngForm" (ngSubmit)="signUp(userSignup.value)" >
+              
+       
+             <div class="form-outline mt-4 mb-3">
+               <input type="text" id="form3Example3" placeholder="Enter User Name" name="name" ngModel class="form-control form-control-lg"/>
+              
+             </div>
+       
+             <div class="form-outline mb-3">
+               <input type="email" id="form3Example3" class="form-control form-control-lg"
+               placeholder="Enter User email" name="email" ngModel/>
+              
+             </div>
+   
+             <div class="form-outline mb-3">
+               <input type="password" id="form3Example4" class="form-control form-control-lg"
+               placeholder="Enter User password" name="password" ngModel />
+              
+             </div>
+   
+             <div class="d-flex justify-content-between align-items-center">
+      
+               <div class="form-check mb-0">
+                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                 <label class="form-check-label" for="form2Example3">
+                   Remember me
+                 </label>
+               </div>
+               <a href="#!" class="text-body">Forgot password?</a>
+             </div>
+   
+             <div class="text-center text-lg-start mt-4 pt-2">
+               <button class="btn btn-primary btn-lg"
+                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Sign-Up</button>
+               <p class="small fw-bold mt-2 pt-1 mb-0">Already have account ? Click to Login <a 
+                   (click)="openLogin()"class="link-danger">Login</a></p>
+             </div>
+   
+           </form>
+         </div>
+       </div>
+     </div>
+    
+   
+   </section>
+        <!-- login area -->
+        <section *ngIf="showLogin" class="vh-100">
+          <div class="container-fluid h-custom">
+               <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-9 col-lg-6 col-xl-4">
+                         <img src="https://i0.wp.com/www.indiaretailing.com/wp-content/uploads/2021/04/The-Future-of-e-retailing-in-India.jpg?fit=681%2C400&ssl=1"
+                              class="img-fluid" alt="Sample image">
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-0">
+                         <p class="error-p">{{authError}}</p>
+                         <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)" class="common-form">
+                              <div class="form-outline mt-4 mb-3">
+                                   <input type="email" ngModel name="email" id="form3Example3"
+                                        class="form-control form-control-lg"
+                                        placeholder="Enter a valid email address"
+                                        #email="ngModel" required/>
+                                        <span class="invalid-input"  *ngIf="email.invalid && email.touched">Enter a valid value</span>
+
+                              </div>
+
+                              <div class="form-outline mb-3">
+                                   <input type="password" ngModel name="password" id="form3Example4"
+                                        class="form-control form-control-lg" placeholder="Enter password" />
+                              </div>
+                              <div class="d-flex justify-content-between align-items-center">
+
+                                   <div class="form-check mb-0">
+                                        <input class="form-check-input me-2" type="checkbox" value=""
+                                             id="form2Example3" />
+                                        <label class="form-check-label" for="form2Example3">
+                                             Remember me
+                                        </label>
+                                   </div>
+                                   <a href="#!" class="text-body">Forgot password?</a>
+                              </div>
+
+                              <div class="text-center text-lg-start mt-4 pt-2">
+                                   <button class="btn btn-primary btn-lg"
+                                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                                   <p class="small fw-bold mt-2 pt-1 mb-0" (click)="opensignUp()">Don't have an account?
+                                        <a class="auth-toggle-link" class="link-danger">Register</a>
+                                   </p>
+                              </div>
+
+                         </form>
+                    </div>
+               </div>
+          </div>
+
+
+     </section>

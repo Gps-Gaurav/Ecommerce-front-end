@@ -1,0 +1,102 @@
+<!-- <div class="row product-details" *ngIf="productData">
+    <div class="col-sm-6">
+        <img class="product-image" src="{{productData.image}}">
+    </div>
+    <div class="col-sm-6">
+        <div class="details">
+            <h1>{{productData.name}}</h1>
+            <h3>{{productData.price}}</h3>
+            <div>
+                Color:<h5>{{productData.color}}</h5>
+            </div>
+            <h6>Category:{{productData.category}}</h6>
+            <h6>Description:{{productData.description}}</h6>
+            <button>Add to card</button>
+            <button>Buy Now</button>
+            <div class="quantity-group">
+                <button>-</button>
+
+            </div>
+        </div>
+
+
+    </div>
+</div> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<div class="container mt-5 mb-5" *ngIf="productData">
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-md-6 border-end">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="main_image"> <img src="{{productData.image}}" id="main_product_image" width="350">
+                    </div>
+                    <div class="thumbnail_images">
+                        <ul id="thumbnail">
+                            <li><img onclick="changeImage(this)" src="{{productData.image}}" width="70"></li>
+                            <li><img onclick="changeImage(this)" src="{{productData.image}}" width="70"></li>
+                            <li><img onclick="changeImage(this)" src="{{productData.image}}" width="70"></li>
+                            <li><img onclick="changeImage(this)" src="{{productData.image}}" width="70"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-3 right-side">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h1>{{productData.name}}</h1> <span class="heart"><i class='bx bx-heart'></i></span>
+                    </div>
+                    <div class="mt-2 pr-3 content">
+                        <h6>{{productData.description}}</h6>
+                    </div>
+                    <h3>₹ {{productData.price}}</h3>
+                    <div class="ratings d-flex flex-row align-items-center">
+                        <div class="d-flex flex-row"> <i class='bx bxs-star'></i> <i class='bx bxs-star'></i> <i
+                                class='bx bxs-star'></i> <i class='bx bxs-star'></i> <i class='bx bx-star'></i> </div>
+                        <span>441 reviews</span>
+                    </div>
+
+                    <h6 class="mt-4">Category : {{productData.category}}</h6>
+
+
+                    <div class="mt-4 mb-2"> <span class="fw-bold">Color</span>
+                        <div>
+                            <h5 [style.backgroundColor]="productData.color" class="product-color"></h5>
+                        </div>
+                        <div class="colors">
+                            <ul id="marker">
+                                <li id="marker-1"></li>
+                                <li id="marker-2"></li>
+                                <li id="marker-3"></li>
+                                <li id="marker-4"></li>
+                                <li id="marker-5"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="m-2">
+                        <div class="input-group mt-4 mb-3">
+                            <input (click)="handleQuantity('min')" type="button" value="-"
+                                class="border rounded-circle ">
+                            <input type="number" step="1" max="10" value="{{productQuantity}}" name="quantity"
+                                class="quantity-field border-0 text-center w-25">
+                            <input (click)="handleQuantity('plus')" type="button" value="+"
+                                class="border rounded-circle ">
+
+                        </div>
+                    </div>
+                  <b>  Special PriceGet extra 20% off (price inclusive of cashback/coupon)</b>
+          
+                    <div class="buttons d-flex flex-row mt-5 gap-3">
+                        
+
+                         <button class="btn btn-outline-dark"(click)="addToCart()" routerLink="/checkout">Buy Now</button  > 
+                            <button *ngIf="!removeCart" (click)="addToCart()" class="btn btn-dark">Add to Cart</button> 
+                            <button *ngIf="removeCart" (click)="removeToCart(productData.id)" class="btn btn-dark">Remove to Cart</button> 
+                        
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

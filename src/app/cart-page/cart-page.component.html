@@ -1,0 +1,118 @@
+<!-- <div class="cart-page">
+    <h1>
+        Cart Page
+    </h1>
+    <div class="row">
+        <div class="col-sm-8 details">
+            <ul *ngFor="let cart of cartData">
+                <li>
+                    <img src="{{cart.image}}" alt="">
+                </li>
+                <li>
+                    <span> {{cart.name}}</span>
+                </li>
+                <li>
+                    <span> Price : {{cart.price}}</span>
+                </li>
+                <li>
+                    <span> Quantity : {{cart.quantity}}</span>
+                </li>
+                <li>
+                    <button class="form-button" (click)="removeToCart(cart.id)">Remove To Cart</button>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-sm-4 summary">
+            <h3>Summary</h3>
+            <ul>
+                <li> <span>Amount:</span><span>{{priceSummary.price}}</span></li>
+                <li> <span>Tax:</span><span>{{priceSummary.tax}}</span></li>
+                <li> <span>Delivery:</span><span>{{priceSummary.delivery}}</span></li>
+                <li> <span>Discount:</span><span>{{priceSummary.discount}}</span></li>
+                <li> <span>
+                        <h4>Total</h4>
+                    </span> <span>
+                        <h4>{{priceSummary.total}}</h4>
+                    </span></li>
+                <button (click)="checkout()" class="form-button max-width">Checkout</button>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+
+<section class="shopping-cart dark">
+    <div class="container">
+        <div class="block-heading">
+            <h2>Shopping Cart</h2>
+            <p></p>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="items">
+                        <div class="product" *ngFor="let cart of cartData">
+                            <div class="row details">
+                                <div class="col-md-2">
+                                    <img src="{{cart.image}}" alt="">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-md-3 product-name">
+                                                <div class="product-name">
+                                                    <span> {{cart.name}}</span>
+                                                    <div class="product-info">
+                                                        <div>
+                                                        <span class="value">{{cart.description}}
+                                                            </span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 quantity">
+                                                <b for="quantity">Quantity </b><br> 
+                                                 <span> {{cart.quantity}}</span>
+                                            </div>
+                                            <div class="col-md-4 price">
+                                                <span> Price : {{cart.price}}</span>
+                                            </div>
+                                            
+                                            <div class="col-md-3">
+                                                <button type="button" (click)="removeToCart(cart.id)"
+                                                    class="btn btn-secondary btn-lg btn-block">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="summary">
+                        <h3>Summary</h3>
+                        <div class="summary-item"><span class="text">Subtotal</span><span
+                                class="price">{{priceSummary.price}}</span>
+                        </div>
+                        <div class="summary-item"><span class="text">Tax</span><span
+                                class="price">{{priceSummary.tax}}</span></div>
+                        <div class="summary-item"><span class="text">Shipping</span><span
+                                class="price">{{priceSummary.delivery}}</span></div>
+                        <div class="summary-item"><span class="text">Discount</span><span
+                                class="price">{{priceSummary.discount}}</span></div>
+                        <div class="summary-item"><span class="text">Total</span><span
+                                class="price">{{priceSummary.total}}</span></div>
+                        <button type="button" (click)="checkout()"
+                            class="btn btn-secondary btn-lg btn-block">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

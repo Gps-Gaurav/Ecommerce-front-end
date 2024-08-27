@@ -1,0 +1,276 @@
+{
+  "seller": [
+    {
+      "name": "gaurav",
+      "password": "gps",
+      "email": "gauravrajputgps@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Gaurav Pratap Singh",
+      "password": "123",
+      "email": "gauravpratapsingh321@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "kirti",
+      "password": "gps",
+      "email": "kirti@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Gaurav Pratap",
+      "password": "123",
+      "email": "gauravpratap@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "admin",
+      "password": "123",
+      "email": "admin@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "raj",
+      "email": "raj@gmail.com",
+      "password": "gps",
+      "id": 6
+    },
+    {
+      "name": "Gaurav Rajput",
+      "email": "gauravrajput@gmail.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "name": "gaurav",
+      "email": "kirti@gmail.com",
+      "password": "123",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "macbook air M2",
+      "price": "149000",
+      "color": "Black",
+      "category": "Laptop",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653084303665",
+      "description": "M2 chip, 8GB RAM, 512 SSD",
+      "id": 4
+    },
+    {
+      "name": "Macbook M1 pro",
+      "price": "189000",
+      "color": "Grey",
+      "category": "Laptops",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spacegray-select-202110?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1632788573000",
+      "description": "Apple M1 Chip 8 GB RAM, 256 GB SSD)",
+      "id": 5
+    },
+    {
+      "name": "Macbook Pro M2",
+      "price": "229000",
+      "color": "Grey",
+      "category": "Laptops",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp-spacegray-select-202206?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664497359481",
+      "description": "M2 Chip, 16GB RAM , 512 SSD.",
+      "id": 7
+    },
+    {
+      "name": "Iphone 14 pro Max",
+      "price": "179000",
+      "color": "Black, White, Gold, Grey",
+      "category": "Mobiles",
+      "image": "https://images.hindustantimes.com/tech/img/2022/09/08/960x540/iPhone_14_Pro_colours_1662619450795_1662619467333_1662619467333.jpg",
+      "description": "CPU, Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz",
+      "id": 8
+    },
+    {
+      "name": "Iphone 13",
+      "price": "79000",
+      "color": "Gold",
+      "category": "Mobiles",
+      "image": "https://www.neuf.tv/wp-content/uploads/2021/09/1631759023_iPhone-13-iPhone-13-Pro-les-meilleures-nouvelles-raisons.jpg",
+      "description": "CPU, Hexa-core (2x3.23 GHz Avalanche + 4x1.82 GHz)",
+      "id": 9
+    },
+    {
+      "name": "Iphone 12 Pro Max",
+      "price": "159000",
+      "color": "Black",
+      "category": "Mobiles",
+      "image": "https://images.news18.com/ibnlive/uploads/2020/11/1605599011_apple-iphone-12-pro-max.png",
+      "description": "Bionic chipset, 2815 mAh battery, 256 GB storage, 4 GB RAM",
+      "id": 10
+    },
+    {
+      "name": "Apple Watch Series 8",
+      "price": "59000",
+      "color": "blue, Pink, Black, Gold, Green",
+      "category": "Watch",
+      "image": "https://s31242.pcdn.co/wp-content/uploads/2021/10/apple-watch-black-friday.jpg",
+      "description": "Apple Watch Ultra has a water resistance",
+      "id": 12
+    },
+    {
+      "name": "Air Pods max",
+      "price": "59000",
+      "color": "White",
+      "category": "Head phone",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/og-airpods-max-202011?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1603996970000",
+      "description": "These headphones can be connected to your Apple Watch",
+      "id": 14
+    },
+    {
+      "name": "Ipad Pro",
+      "price": "43000",
+      "color": "White",
+      "category": "Tab",
+      "image": "https://cdn.mos.cms.futurecdn.net/qkcWcJfqxTcbdU7ZEuHyY.jpg",
+      "description": " ‎256GB 1 Space Grey Wi-Fi.",
+      "id": 15
+    },
+    {
+      "name": "Nike",
+      "price": "6000",
+      "color": "White",
+      "category": "Shoes",
+      "image": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2022%2F05%2Fnike-flyknit-racer-white-black-dj6106-002-release-info-001.jpg?q=75&w=800&cbr=1&fit=max",
+      "description": "Men's Shoes · Guides. Nike Adapt · Nike Air · Nike Air Force ",
+      "id": 16
+    },
+    {
+      "name": "Puma",
+      "price": "7000",
+      "color": "Black",
+      "category": "Shoes",
+      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/377180/01/sv01/fnd/IND/fmt/png",
+      "description": "Shop for the best shoes for men online in India from PUMA's latest collection",
+      "id": 17
+    },
+    {
+      "name": "Adidas",
+      "price": "7500",
+      "color": "White",
+      "category": "Shoes",
+      "image": "https://sklep.sizeer.com/media/cache/gallery/rc/mthztygs/adidas-nmd-r1-j-mlodziezowe-sneakersy-bialy-fw0432.jpg",
+      "description": "Find adidas Men's Shoes at best price. All styles, colours & latest collections of Men's Shoes",
+      "id": 18
+    },
+    {
+      "name": "Reebok",
+      "price": "4000",
+      "color": "White",
+      "category": "Shoes",
+      "image": "https://assets.reebok.com/images/w_600,f_auto,q_auto/5f160a8e6afb482c89c7ad710167cea9_9366/Classic_Leather_1983_Vintage_Shoes_White_GX6123_01_standard.jpg",
+      "description": "Reebok Shoes & Sneakers, Reebok sports shoes, Reebok running shoes, Reebok casual shoes",
+      "id": 19
+    },
+    {
+      "name": "Air conditioner",
+      "price": "56000",
+      "color": "White",
+      "category": "Air conditioner",
+      "image": "https://st2.depositphotos.com/1001877/11122/i/950/depositphotos_111221716-stock-photo-air-conditioner-system-isolated-on.jpg",
+      "description": "Air conditioners, which typically use vapor-compression refrigeration, range in size from small units used within vehicles or single rooms to massive units",
+      "id": 20
+    },
+    {
+      "name": "Air conditioner",
+      "price": "66000",
+      "color": "White",
+      "category": "Air conditioner",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT09m8Chn4ax5DUEC1J05x1iPJfxX5ZahJYgw&usqp=CAU",
+      "description": "Air conditioners, which typically use vapor-compression refrigeration, range in size from small units used within vehicles or single rooms to massive units",
+      "id": 21
+    },
+    {
+      "name": "Air conditioner",
+      "price": "49000",
+      "color": "White",
+      "category": "Air conditioner",
+      "image": "https://5.imimg.com/data5/GY/QQ/MY-12506789/split-air-conditioner-500x500.jpg",
+      "description": "Air conditioners, which typically use vapor-compression refrigeration, range in size from small units used within vehicles or single rooms to massive units",
+      "id": 22
+    },
+    {
+      "name": "Microsoft Surface",
+      "price": "129000",
+      "color": "White",
+      "category": "Laptop",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5i9K6ui6TVxNzBxrFTrLXIFgDTjDo2BnqsrCjzJi0Q8P2YtPQ4ITQ_xCitz9np2dSeK0&usqp=CAU",
+      "description": "Specifications, Processor, 10th Generation Intel Core i5-1035G1, Memory, 8GB LPDDR4x, Storage, 128GB SSD, Display, 12.4” PixelSense Touch ..",
+      "id": 23
+    },
+    {
+      "name": "Dell XPS",
+      "price": "229000",
+      "color": "White",
+      "category": "Laptop",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJCe-XLb1oyQITi0iWCcSlMK2suC8BfRn6-j_rZmCHRRTOOgDEdiic0CE-mxcy8ErU7-w&usqp=CAU",
+      "description": "Specifications, Processor, 10th Generation Intel Core i5-1035G1, Memory, 8GB LPDDR4x, Storage, 128GB SSD, Display, 12.4” PixelSense Touch ..",
+      "id": 24
+    },
+    {
+      "name": "Dell Latitude ",
+      "price": "139000",
+      "color": "White",
+      "category": "Laptop",
+      "image": "https://img.etimg.com/thumb/msid-70450624,width-650,imgsize-273503,,resizemode-4,quality-100/dell-expresssign-is-one-of-the-most-impressing-features-on-the-laptop-.jpg",
+      "description": "Specifications, Processor, 10th Generation Intel Core i5-1035G1, Memory, 8GB LPDDR4x, Storage, 128GB SSD, Display, 12.4” PixelSense Touch ..",
+      "id": 25
+    }
+  ],
+  "users": [
+    {
+      "name": "kirti",
+      "email": "kirti@gmail.com",
+      "password": "gps",
+      "id": 1
+    },
+    {
+      "name": "Gaurav Pratap Singh",
+      "email": "gauravpratapsingh321@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "gaurav",
+      "email": "gauravrajputgps@gmail.com",
+      "password": "123",
+      "id": 3
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "firstName": "Gaurav ",
+      "lastName": "Singh",
+      "contact": "3333333333333",
+      "email": "gauravrajputgps@gmail.com",
+      "address": "bijnor",
+      "country": "india",
+      "state": "uttar pradesh",
+      "zip": "258121",
+      "totalPrice": 298100,
+      "userId": 3,
+      "image": "",
+      "id": 1
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "contact": "",
+      "email": "",
+      "address": "",
+      "country": "",
+      "state": "",
+      "zip": "",
+      "totalPrice": 227100,
+      "userId": 1,
+      "image": "",
+      "id": 2
+    }
+  ]
+}

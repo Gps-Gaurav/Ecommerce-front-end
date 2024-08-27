@@ -1,0 +1,419 @@
+<!-- <nav class="nav">
+     <h1><a routerLink="/"> E-Commerce</a></h1>
+     <div *ngIf="menuType==='default'" class="nav-serach">
+          <input type="text" placeholder="search" />
+          <button>Search</button>
+     </div>
+    <div [ngSwitch]="menuType">
+     <ul *ngSwitchCase="'default'" >
+          <li><a routerLink="seller-auth">Seller</a></li>
+          <li><a routerLink="">Home</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Cart(0)</a></li>
+     </ul>
+     <ul *ngSwitchCase="'seller'" >
+          <li><a routerLink="seller-add-products">Add Product list</a></li>
+          <li><a routerLink="seller-home">Product list</a></li>
+          <li><a (click)="logOut()">LogOut</a></li>
+          <li><a href="#">{{sellerName}}</a></li>
+     </ul>
+    </div>
+</nav> -->
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 m-0">
+	<h1><a routerLink="/"> <img src=""> E-Commerce</a></h1>
+	<div *ngIf="menuType==='default'" class="nav-serach">
+		<input #searchInput (keyup)="searchProducts($event)" (blur)="hideSearch()" type="text" placeholder="search" />
+		<button (click)="submitSearch(searchInput.value)">Search</button>
+		<ul class="suggested-result" *ngIf="searchResult">
+			<li *ngFor="let item of searchResult">
+				<a (mousedown)="redirectToDetail(item.id)">{{item.name}}</a>
+			</li>
+
+		</ul>
+	</div>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+		aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+		(click)="isCollapsed = !isCollapsed">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse justify-content-end " id="navbarColor03" [ngbCollapse]="isCollapsed">
+		<div [ngSwitch]="menuType">
+			<ul *ngSwitchCase="'default'" class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" routerLink="seller-auth">Seller</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="">Home</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/user-auth">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Cart(0)</a></li>
+			</ul>
+			<ul *ngSwitchCase="'seller'" class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" routerLink="seller-add-products">Add Product list</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="seller-home">Product list</a></li>
+				<li class="nav-item"><a class="nav-link" (click)="logOut()">LogOut</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">{{sellerName}}</a></li>
+
+				<li ngbDropdown class="d-inline-block">
+					<button type="button" class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
+						More</button>
+					<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+						<button ngbDropdownItem>Action 1</button>
+						<button ngbDropdownItem>Action 2</button>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+
+
+	</div>
+</nav> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<!-- Header -->
+
+<header class="pos-f-t sticky-top">
+
+	<!-- Top Bar -->
+
+	<div class="top_bar ">
+		<div class="container ">
+			<div class="row m-0 p-0">
+				<div class="col d-flex flex-row">
+					<div class="top_bar_contact_item">
+						<div class="top_bar_icon px-1"><img
+								src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png"
+								alt=""></div>+91 9389879393 &nbsp; or&nbsp; +91 8192094736
+					</div>
+
+					<div class="top_bar_content col d-flex flex-row justify-content-end">
+						<div class="top_bar_menu ">
+							<ul class="standard_dropdown top_bar_dropdown ">
+								<li>
+									<a href="#">English<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li><a href="#">English</a></li>
+										<li><a href="#">Hindi</a></li>
+
+									</ul>
+								</li>
+
+								<li>
+									<a href="#">Account Type<i class="fas fa-chevron-down"></i></a>
+									<ul [ngSwitch]="menuType">
+										<li><a routerLink="seller-auth">Seller Account</a></li>
+
+
+										<li><a routerLink="user-auth">User Account</a></li>
+
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="top_bar_user ">
+
+							<div *ngIf="menuType==='user'"><a href="">Free 1-2 days shipping over $49</a></div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Main Navigation -->
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light p-0 m-0">
+		<h1><a routerLink="/"> <img src="">Emporium</a></h1>
+		<div *ngIf="menuType==='user'" class="nav-serach">
+
+
+			<div class="form">
+				<i (click)="submitSearch(searchInput.value)" class="fa fa-search"></i>
+				<input #searchInput (keyup)="searchProducts($event)" (blur)="hideSearch()" type="text" class="form-control form-input" placeholder="Search anything...">
+				<span (click)="submitSearch(searchInput.value)" class="left-pan"><i class="fa fa-microphone"></i></span>
+			</div>
+			<ul class="suggested-result" *ngIf="searchResult">
+				<li *ngFor="let item of searchResult">
+					<a (mousedown)="redirectToDetail(item.id)">{{item.name}}</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+			aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+			(click)="isCollapsed = !isCollapsed">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse justify-content-end " id="navbarColor03" [ngbCollapse]="isCollapsed">
+			<div [ngSwitch]="menuType">
+
+				<ul *ngSwitchCase="'default'" class="navbar-nav mr-auto">
+					<!-- <li class="nav-item"><a class="nav-link" routerLink="seller-auth">Seller</a></li> -->
+					<!-- <li class="nav-item"><a class="nav-link" routerLink="">Home</a></li> -->
+
+          <li class="nav-item"><a class="nav-link" routerLink="/user-auth">Login / SignUp </a></li>
+					<li class="nav-item"><i [routerLink]="cartItems>0?'cart-page':null" class="fa"
+							style="font-size:25px">&#xf07a;</i>
+						<span class="cartNumber"> {{cartItems}}&nbsp;</span>
+					</li>
+				</ul>
+
+				<ul *ngSwitchCase="'user'" class="navbar-nav mr-auto">
+
+					<li class="nav-item">
+						<a class="nav-link" routerLink="user-auth"><b>{{userName|titlecase}}</b></a>
+					</li>
+					<li><a routerLink="my-orders">My Orders</a></li>
+					<li class="nav-item"><a class="nav-link" (click)="userLogout()">Logout</a></li>
+					<li class="nav-item"><i [routerLink]="cartItems>0?'cart-page':null" class="fa"
+							style="font-size:25px">&#xf07a;</i>
+						<span class="cartNumber"> {{cartItems}}&nbsp;</span>
+					</li>
+
+				</ul>
+
+				<ul *ngSwitchCase="'seller'" class="navbar-nav mr-auto">
+
+					<li class="nav-item"><a class="nav-link" routerLink="seller-add-products">Add Product list</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" routerLink="seller-home">Product list</a></li>
+					<li class="nav-item"><a class="nav-link" href="#"><b>{{sellerName}}</b></a></li>
+					<li class="nav-item"><a class="nav-link" (click)="logOut()">LogOut</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
+
+
+
+	<nav class="main_nav">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<div class="main_nav_content d-flex flex-row " [ngSwitch]="menuType">
+
+						<div class="main_nav_menu" *ngSwitchCase="'user'">
+							<ul class="standard_dropdown main_nav_dropdown">
+								<li><a routerLink="/">Home<i class="fas fa-chevron-down"></i></a></li>
+								<li><a routerLink="/contact">Contact</a>
+								<li><a href="/">Garments</a>
+								</li>
+								<li class="hassubs">
+									<a href="/">Laptops<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li>
+											<a href="/">APPLE<i class="fas fa-chevron-down"></i></a>
+											<ul>
+
+												<li><a href="/">MacBook Air (M2)<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+												<li><a href="/">MacBook Air (M2) Pro<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+												<li><a href="/">MacBook Air (M1)<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+
+
+
+											</ul>
+										</li>
+										<li><a href="/">Microsoft Surface<i
+													class="fas fa-chevron-down"></i></a>
+										</li>
+										<li><a href="/">Dell Alienware<i class="fas fa-chevron-down"></i></a>
+										</li>
+										<li><a href="/">Asus ROG<i class="fas fa-chevron-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="hassubs">
+									<a href="/">Mobiles<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li>
+											<a href="/">Apple<i class="fas fa-chevron-down"></i></a>
+											<ul>
+												<li><a href="/">Iphone 12<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+												<li><a href="/">Iphone 13<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+												<li><a href="//">Iphone 14<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+											</ul>
+										</li>
+										<li><a href="/">Oneplus<i class="fas fa-chevron-down"></i></a></li>
+										<li><a href="/">Oppo<i class="fas fa-chevron-down"></i></a></li>
+										<li><a href="/">Vivo<i class="fas fa-chevron-down"></i></a></li>
+
+									</ul>
+								</li>
+								<li class="hassubs">
+									<a href="/">Featured Brands<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li>
+											<a href="/">Samsung<i class="fas fa-chevron-down"></i></a>
+											<ul>
+												<li><a href="/">Laptop<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+												<li><a href="/">Mobiles<i
+															class="fas fa-chevron-down"></i></a>
+												</li>
+												<li><a href="/">Ipads<i class="fas fa-chevron-down"></i></a>
+												</li>
+											</ul>
+										</li>
+										<li><a href="/">HP<i class="fas fa-chevron-down"></i></a>
+										</li>
+
+										<li><a href="/">DELL<i class="fas fa-chevron-down"></i></a></li>
+										<li><a href="/">Asus<i class="fas fa-chevron-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="hassubs">
+									<a href="/">Premium Brands<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li>
+											<a href="/">APPLE<i class="fas fa-chevron-down"></i></a>
+											<ul>
+												<li><a href="/">Laptop<i
+															class="fas fa-chevron-down"></i></a>
+													<ul>
+														<li><a href="/">MacBook Air (M2)<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">MacBook Air (M2) Pro<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">MacBook Air (M1)<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">MacBook Air (M1) Pro<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+													</ul>
+												</li>
+												<li><a href="/">Mobiles<i
+															class="fas fa-chevron-down"></i></a>
+													<ul>
+														<li><a href="/">iPhone 14 Pro Max<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">iPhone 14 <i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">iPhone 13 Pro<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">iPhone 12 Pro <i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+													</ul>
+												</li>
+												<li><a href="/">Ipads<i class="fas fa-chevron-down"></i></a>
+												</li>
+											</ul>
+										</li>
+										<li><a href="/">Microsoft Surface<i
+													class="fas fa-chevron-down"></i></a>
+										</li>
+										<li><a href="/">Dell Alienware<i class="fas fa-chevron-down"></i></a>
+										</li>
+										<li><a href="/">Asus ROG<i class="fas fa-chevron-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="hassubs">
+									<a href="/">Affordable Brands<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li>
+											<a href="/">Samsung<i class="fas fa-chevron-down"></i></a>
+											<ul>
+												<li><a href="/">Laptop<i
+															class="fas fa-chevron-down"></i></a>
+													<ul>
+														<li><a href="/">Galaxy Book2<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">Samsung Chromebook<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">Galaxy Book Go<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/"> Notebook 9 Pro<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+													</ul>
+												</li>
+												<li><a href="/">Mobiles<i
+															class="fas fa-chevron-down"></i></a>
+													<ul>
+														<li><a href="/">Galaxy M21<i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">Galaxy M33 <i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">Samsung Galaxy A23 <i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+														<li><a href="/">Samsung Galaxy M13 5G <i
+																	class="fas fa-chevron-down"></i></a>
+														</li>
+													</ul>
+												</li>
+												<li><a href="/">Ipads<i class="fas fa-chevron-down"></i></a>
+												</li>
+											</ul>
+										</li>
+										<li><a href="/">Realme<i class="fas fa-chevron-down"></i></a>
+										</li>
+										<li><a href="/">Xiaomi <i class="fas fa-chevron-down"></i></a>
+										</li>
+										<li><a href="/">Lenovo<i class="fas fa-chevron-down"></i></a></li>
+
+									</ul>
+								</li>
+
+								<li class="hassubs">
+									<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
+									<ul>
+										<li><a href="/">Shop</a>
+										</li>
+										<li><a href="/">Product</a></li>
+										<li><a href="/">Blog</a>
+										</li>
+
+										<li><a href="/">Cart</a>
+										</li>
+
+									</ul>
+								</li>
+
+
+							</ul>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

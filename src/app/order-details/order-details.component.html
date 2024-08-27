@@ -1,0 +1,63 @@
+<div class="container">
+     <article class="card">
+          <header class="card-header"> My Orders / Tracking </header>
+          <div class="card-body">
+               <h6>Order ID: OD45345345435</h6>
+               <article class="card">
+                    <div class="card-body row">
+                         <div class="col"> <strong>Estimated Delivery time:</strong> <br>19 nov 2022</div>
+                         <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i class="fa fa-phone"></i>
+                              +91 8192094736 </div>
+                         <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
+                         <div class="col"> <strong>Tracking #:</strong> <br> BD045903594059 </div>
+                    </div>
+               </article>
+               <div class="track">
+                    <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span
+                              class="text">Order confirmed</span> </div>
+                    <div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text">
+                              Picked by courier</span> </div>
+                    <div class="step"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On
+                              the way </span> </div>
+                    <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">Ready
+                              for pickup</span> </div>
+               </div>
+               <hr>
+               <hr>
+               <h2 class="m-5">Trendy Product</h2>
+               <div class="container mt-5 mb-5" *ngFor="let item of trackProducts">
+                    <div class="d-flex justify-content-center row">
+                         <div class="col-md-10">
+                              <div class="row p-2 bg-white border rounded mt-2">
+                                   <div class="col-md-3 mt-1 img-fluid img-responsive rounded product-image">
+                                        <a routerLink="/details/{{item.id}}"><img class="card-img-top"
+                                                  src="{{item.image}}" alt="Card image cap"></a>
+                                   </div>
+
+                                   <div class="col-md-6 mt-3">
+                                        <h5>{{item.name}}</h5>
+                                        <p><span>Color:{{item.color}}</span><span>Category:{{item.category}}</span></p>
+                                        <p>{{item.description}}</p>
+                                   </div>
+
+                                   <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                        <div class="d-flex flex-row align-items-center">
+                                             <h4 class="mr-1"><b>Price:{{item.price}}</b></h4>
+                                        </div>
+                                        <h6 class="text-success">Free shipping</h6>
+                                        <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
+                                                  routerLink="/details/{{item.id}}"
+                                                  type="button">Details</button><button
+                                                  class="btn btn-outline-primary btn-sm mt-2" type="button">Add to
+                                                  wishlist</button></div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <hr>
+               <a routerLink="/my-orders" class="btn btn-warning" data-abc="true"> <i class="fa fa-chevron-left"></i>
+                    Back to orders</a>
+          </div>
+     </article>
+</div>

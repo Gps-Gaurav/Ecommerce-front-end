@@ -1,0 +1,33 @@
+.sign-up,
+.login {
+     text-align: center;
+     margin-bottom: 50px;
+     margin-top: 80px;
+     color: blueviolet;
+}
+
+.auth-toggle-link {
+     margin-top: 20px;
+     color: blueviolet;
+     font-size: 14px;
+     text-align: left;
+     cursor: pointer;
+}
+
+.divider:after,
+.divider:before {
+     content: "";
+     flex: 1;
+     height: 1px;
+     background: #eee;
+}
+
+.h-custom {
+     height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+     .h-custom {
+          height: 100%;
+     }
+}

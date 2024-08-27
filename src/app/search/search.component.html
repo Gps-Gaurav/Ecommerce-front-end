@@ -1,0 +1,41 @@
+<!-- <div class="row search-item" *ngFor="let item of searchResult">
+     <div class="col-sm-3">
+          <a routerLink="/details/{{item.id}}"><img class="card-img-top" src="{{item.image}}" alt="Card image cap"></a>
+     </div>
+     <div class="col-sm-8 details">
+          <h5>{{item.name}}</h5>
+          <p><b>Price:{{item.price}}</b></p>
+          <p><span>Color:{{item.color}}</span><span>Category:{{item.category}}</span></p>
+          <p>{{item.description}}</p>
+     </div>
+
+</div> -->
+<div class="container mt-5 mb-5" *ngFor="let item of searchResult">
+     <div class="d-flex justify-content-center row">
+          <div class="col-md-10">
+               <div class="row p-2 bg-white border rounded mt-2">
+                    <div class="col-md-3 mt-1 img-fluid img-responsive rounded product-image">
+                         <a routerLink="/details/{{item.id}}"><img class="card-img-top" src="{{item.image}}"
+                                   alt="Card image cap"></a>
+                    </div>
+
+                    <div class="col-md-6 mt-3">
+                         <h5>{{item.name}}</h5>
+                         <p><span>Color:{{item.color}}</span><span>Category:{{item.category}}</span></p>
+                         <p>{{item.description}}</p>
+                    </div>
+
+                    <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                         <div class="d-flex flex-row align-items-center">
+                              <h4 class="mr-1"><b>Price:{{item.price}}</b></h4>
+                         </div>
+                         <h6 class="text-success">Free shipping</h6>
+                         <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
+                              routerLink="/details/{{item.id}}"
+                              type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
+                                   type="button">Add to wishlist</button></div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
