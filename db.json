@@ -1,53 +1,13 @@
 {
   "seller": [
-    {
-      "name": "gaurav",
-      "password": "gps",
-      "email": "gauravrajputgps@gmail.com",
-      "id": 1
-    },
-    {
-      "name": "Gaurav Pratap Singh",
-      "password": "123",
-      "email": "gauravpratapsingh321@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "kirti",
-      "password": "gps",
-      "email": "kirti@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "Gaurav Pratap",
-      "password": "123",
-      "email": "gauravpratap@gmail.com",
-      "id": 4
-    },
+
     {
       "name": "admin",
       "password": "123",
       "email": "admin@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "raj",
-      "email": "raj@gmail.com",
-      "password": "gps",
-      "id": 6
-    },
-    {
-      "name": "Gaurav Rajput",
-      "email": "gauravrajput@gmail.com",
-      "password": "123",
-      "id": 7
-    },
-    {
-      "name": "gaurav",
-      "email": "kirti@gmail.com",
-      "password": "123",
-      "id": 8
+      "id": 1
     }
+
   ],
   "products": [
     {
@@ -224,22 +184,10 @@
   ],
   "users": [
     {
-      "name": "kirti",
-      "email": "kirti@gmail.com",
-      "password": "gps",
-      "id": 1
-    },
-    {
-      "name": "Gaurav Pratap Singh",
-      "email": "gauravpratapsingh321@gmail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
       "name": "gaurav",
       "email": "gauravrajputgps@gmail.com",
       "password": "123",
-      "id": 3
+      "id": 1
     }
   ],
   "cart": [],
@@ -257,20 +205,6 @@
       "userId": 3,
       "image": "",
       "id": 1
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "contact": "",
-      "email": "",
-      "address": "",
-      "country": "",
-      "state": "",
-      "zip": "",
-      "totalPrice": 227100,
-      "userId": 1,
-      "image": "",
-      "id": 2
     }
   ]
 }
